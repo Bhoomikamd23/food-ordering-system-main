@@ -19,4 +19,19 @@ return Integer.parseInt(input);
             }
         }
     }
+    /**
+ * Reads a positive integer from the user.
+ * Repeats until the user enters a number greater than zero.
+ */
+public static int readPositiveNumber(Scanner scanner, String message) {
+    while (true) {
+        int number = readNumber(scanner, message);
+
+        if (number > 0) {
+            return number;
+        }
+
+        System.out.println("Enter a number greater than zero.");
+    }
+}
 }
